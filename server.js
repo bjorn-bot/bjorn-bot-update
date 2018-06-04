@@ -13,7 +13,7 @@ app.get('/', function (request, response) {
   if (numPings % 3 === 0) updateLocations();
   if (numPings === 1) updateKeepInfo();
   if (numPings % 11 === 0 && numPings % 3 !== 0) updateKeepInfo();
-  
+
   response.sendStatus(200);
 });
 
