@@ -4,6 +4,8 @@ const app = express();
 const updateLocations = require('./lib/update_locations');
 const updateKeepInfo = require('./lib/update_keep_info');
 
+// TODO: get all keeps, assign to object lastUpdated.  in update locations and update keep info, only update those keeps that have changed
+
 let numPings = 0;
 
 app.get('/', function (request, response) {
