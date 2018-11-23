@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var keepSchema = new mongoose.Schema({
+var slothSchema = new mongoose.Schema({
   owner_id: { type: String, unique: true, required: true },
   name: String,
   allNames: [String],
@@ -16,4 +16,4 @@ var keepSchema = new mongoose.Schema({
   power: Number
 });
 
-module.exports = exports = mongoose.model('Keep', keepSchema);
+module.exports = exports = mongoose.model('Sloth', slothSchema);
