@@ -2,9 +2,9 @@ const http = require('http');
 const express = require('express');
 const app = express();
 const updateLocations = require('./lib/update_locations');
-const updateKeepInfo = require('./lib/update_keep_info');
+const updateslothInfo = require('./lib/update_sloth_info');
 
-// TODO: get all keeps, assign to object lastUpdated.  in update locations and update keep info, only update those keeps that have changed
+// TODO: get all sloths, assign to object lastUpdated.  in update locations and update sloth info, only update those sloths that have changed
 
 let numPings = 0;
 
@@ -13,8 +13,8 @@ app.get('/', function (request, response) {
   console.log(Date.now() + ' Ping Received');
 
   if (numPings % 3 === 0) updateLocations();
-  if (numPings === 1) updateKeepInfo();
-  if (numPings % 11 === 0 && numPings % 3 !== 0) updateKeepInfo();
+  if (numPings === 1) updateslothInfo();
+  if (numPings % 11 === 0 && numPings % 3 !== 0) updateslothInfo();
 
   response.sendStatus(200);
 });
